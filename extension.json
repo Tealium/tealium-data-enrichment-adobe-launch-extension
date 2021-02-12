@@ -1,0 +1,48 @@
+{
+  "displayName": "Tealium Data Enrichment",
+  "name": "tealium-data-enrichment",
+  "platform": "web",
+  "version": "1.0.0",
+  "description": "The client-side data enrichment extension for use with Tealium Customer Data Hub",
+  "author": {
+    "name": "Tealium, Inc",
+    "email": "support@tealium.com"
+  },
+  "exchangeUrl":"https://www.adobeexchange.com/experiencecloud.details.??????.html",
+  "viewBasePath": "src/view/",
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {
+        "account" : {
+          "type" : "string",
+          "minLength" : 0
+        },
+        "profile" : {
+          "type" : "string",
+          "minLength" : 0
+        },
+        "endpoint" : {
+          "type" : "string",
+          "minLength" : 0
+        }
+      },
+      "required" : ["account", "profile"]
+    }
+  },
+  "actions": [
+    {
+      "displayName": "Enrich Visitor Data",
+      "name": "enrich-visitor-data",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/enrichVisitorData.js"
+    }
+  ]
+}
+
