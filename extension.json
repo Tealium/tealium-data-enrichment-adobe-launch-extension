@@ -1,14 +1,15 @@
 {
-  "displayName": "Tealium Data Enrichment",
-  "name": "tealium-data-enrichment",
+  "displayName": "Tealium Collect",
+  "name": "tealium-collect",
   "platform": "web",
-  "version": "1.0.0",
-  "description": "The client-side data enrichment extension for use with Tealium Customer Data Hub",
+  "version": "1.0.1",
+  "description": "The data collection extension for Tealium\u0027s Customer Data Hub (CDH)",
+  "iconPath": "tealium.svg",
   "author": {
     "name": "Tealium, Inc",
     "email": "support@tealium.com"
   },
-  "exchangeUrl":"https://www.adobeexchange.com/experiencecloud.details.??????.html",
+  "exchangeUrl":"https://www.adobeexchange.com/experiencecloud.details.104217.html",
   "viewBasePath": "src/view/",
   "configuration": {
     "viewPath": "configuration/configuration.html",
@@ -24,7 +25,15 @@
           "type" : "string",
           "minLength" : 0
         },
+        "dataSourceKey" : {
+          "type" : "string",
+          "minLength" : 0
+        },
         "endpoint" : {
+          "type" : "string",
+          "minLength" : 0
+        },
+        "dataObjectName" : {
           "type" : "string",
           "minLength" : 0
         }
@@ -32,17 +41,16 @@
       "required" : ["account", "profile"]
     }
   },
-  "actions": [
+  "actions":[
     {
-      "displayName": "Enrich Visitor Data",
-      "name": "enrich-visitor-data",
-      "schema": {
+      "name" : "track",
+      "displayName" : "Track Event",
+      "libPath" : "src/lib/actions/track.js",
+      "schema" : {
         "$schema": "http://json-schema.org/draft-04/schema#",
         "type": "object",
         "properties": {}
-      },
-      "libPath": "src/lib/actions/enrichVisitorData.js"
+      }
     }
   ]
 }
-
