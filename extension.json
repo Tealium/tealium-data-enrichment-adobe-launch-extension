@@ -4,11 +4,12 @@
   "platform": "web",
   "version": "1.0.0",
   "description": "The client-side data enrichment extension for use with Tealium Customer Data Hub",
+  "iconPath": "tealium.svg",
   "author": {
     "name": "Tealium, Inc",
     "email": "support@tealium.com"
   },
-  "exchangeUrl":"https://www.adobeexchange.com/experiencecloud.details.??????.html",
+  "exchangeUrl":"https://exchange.adobe.com/experiencecloud.details.105623.tealium-data-enrichment-extension-for-adobe-launch.html",
   "viewBasePath": "src/view/",
   "configuration": {
     "viewPath": "configuration/configuration.html",
